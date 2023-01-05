@@ -4,6 +4,16 @@
 
 ---
 
+## to see the demo
+
+```
+$ npm install
+$ npm run start
+
+```
+
+<br/>
+
 ## Solution and Comment
 
 ```
