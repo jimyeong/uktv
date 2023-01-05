@@ -29,10 +29,10 @@ structure
 
 ```
 
-- used Context API pattern in the Main.js to make the code stay simple and scalable as long as possible.
+- used Context API pattern in the Main.js to make the code stay simple and scalable. it will make me easy to add some features more in the future and manage them. I also distincted the feature of each components.
 
 - used hooks patterns, to maximize reusualblity on React.
 
-- to react to unexpected changes, create ui-confing where mananges colours, responsive break points etc.
+- to react to unexpected changes, created ui-confing where mananges colours, responsive break points etc.
 
-- to maximize reusability I devided file trees into common components and specific components that are only used in certain pages.
+- to maximize reusability I devided the file tree into common components and specific components that are only used in certain pages.
