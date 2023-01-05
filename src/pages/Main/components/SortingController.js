@@ -30,12 +30,7 @@ function SortingController() {
   if (showflag)
     return (
       <SortingControllerBlock style={{ marginTop: "16px" }}>
-        <BUTTONS.BASE_BUTTON
-          backgroundColor={pageData.isSorted && "#ff5252"}
-          onClick={onClick}
-        >
-          {text}
-        </BUTTONS.BASE_BUTTON>
+        <BUTTONS.BASE_BUTTON onClick={onClick}>{text}</BUTTONS.BASE_BUTTON>
       </SortingControllerBlock>
     );
   return null;
