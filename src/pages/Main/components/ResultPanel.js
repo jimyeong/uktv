@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { ProgressBar } from "../../../components";
 import Ship from "./Ship";
 import Vehicle from "./Vehicle";
 import Film from "./Film";
+import { MainContext } from "../Main";
 
 const ResultPanelBlock = styled.div`
   margin-top: 38px;
@@ -23,7 +24,9 @@ const SEARCH_TYPE = {
   films: "films",
 };
 
-function ResultPanel({ status, keyword }) {
+function ResultPanel() {
+  const pageContext = useContext(MainContext);
+  const { keyword, status } = pageContext;
   const { loading, data, error } = status;
   const setSearchStatus = () => {
     if (loading) {

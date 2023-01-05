@@ -37,7 +37,6 @@ const ShipContainer = styled.div`
 `;
 
 function Ship({ ships }) {
-  console.log("what is ships", ships);
   return (
     <ShipContainer>
       <TABLES.BASE_TABLE>
