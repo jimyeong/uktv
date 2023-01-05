@@ -5,8 +5,6 @@ import { MainContext } from "../Main";
 
 const SortingControllerBlock = styled.div``;
 
-// @@@
-
 function SortingController() {
   const pageContext = useContext(MainContext);
   const { keyword, status, isSorted, pageData, setPageData } = pageContext;

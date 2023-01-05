@@ -27,6 +27,7 @@ function Main() {
   const inputState = { values: "" };
   const [pageData, setPageData] = useState(initialState);
 
+  // hooks patterns
   const [inputValues, onReset, onChange] = useInput(inputState);
   const [{ loading, error, data }, fetchData] = useAsync(async () => {
     if (pageData.keyword != "") {
@@ -48,6 +49,8 @@ function Main() {
   useEffect(() => {}, [data]);
   const status = { loading, error, data };
   const { keyword, sortBy } = pageData;
+
+  // context api used, to make the code stay simple and scalable.
 
   return (
     <MainBlock>
