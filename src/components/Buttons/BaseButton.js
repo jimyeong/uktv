@@ -27,6 +27,7 @@ export const initButton = (props) => {
 };
 
 const BASE_BUTTON = styled.button`
+  border: none;
   cursor: pointer;
   width: 100%;
   display: block;

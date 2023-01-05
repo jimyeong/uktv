@@ -27,4 +27,17 @@ export const Utils = {
   truncate: (str, n) => {
     if (str) return str.length > n ? str.substr(0, n - 1) + "..." : str;
   },
+  compareChars: (a, b) => {
+    if (
+      a.title.substring(0, 1).toLowerCase() >
+      b.title.substring(0, 1).toLowerCase()
+    )
+      return 1;
+    if (
+      a.title.substring(0, 1).toLowerCase() <
+      b.title.substring(0, 1).toLowerCase()
+    )
+      return -1;
+    return 0;
+  },
 };

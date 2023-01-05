@@ -1,6 +1,6 @@
 export const config = {
   color: {
-    default: "#0088cc",
+    default: "#dee3ff",
   },
   breakpoint: {
     md: 770,

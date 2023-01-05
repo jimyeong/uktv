@@ -6,6 +6,7 @@ import { _axios } from "../../server";
 import { useAsync } from "../../hooks/useAsync";
 import ResultPanel from "./components/ResultPanel";
 import { config } from "../../uiconfig";
+import SortingController from "./components/SortingController";
 
 const MainBlock = styled.div``;
 const PageContainer = styled.div`
@@ -22,7 +23,7 @@ const initialState = { values: "" };
 
 function Main() {
   const inputState = { values: "" };
-  const [pageData, setPageData] = useState({ current_keyword: "" });
+  const [pageData, setPageData] = useState({ current_keyword: "", sortBy: 0 });
 
   const [inputValues, onReset, onChange] = useInput(inputState);
   const [{ loading, error, data }, fetchData] = useAsync(async () => {
@@ -52,6 +53,7 @@ function Main() {
     <MainBlock>
       <PageContainer>
         <SearchBar inputId="keyword" callback={getSearchKeyword} />
+        <SortingController keyword={pageData.current_keyword} />
 
         <ResultPanel
           status={{ loading, error, data }}
